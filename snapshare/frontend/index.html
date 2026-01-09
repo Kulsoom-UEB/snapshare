@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SnapShare</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <h1>SnapShare</h1>
+    <nav>
+      <button id="creatorTab" class="active">Creator</button>
+      <button id="feedTab">Consumer Feed</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Creator View -->
+    <section id="creatorView">
+      <h2>Upload Photo</h2>
+
+      <label>Image</label>
+      <input type="file" id="imageInput" accept="image/*"/>
+
+      <label>Title</label>
+      <input type="text" id="titleInput"/>
+
+      <label>Caption</label>
+      <textarea id="captionInput"></textarea>
+
+      <label>Location</label>
+      <input type="text" id="locationInput"/>
+
+      <label>People Present (comma separated)</label>
+      <input type="text" id="peopleInput"/>
+
+      <button id="publishBtn">Publish</button>
+      <p id="creatorStatus"></p>
+    </section>
+
+    <!-- Consumer Feed View -->
+    <section id="feedView" class="hidden">
+      <h2>Photo Feed</h2>
+
+      <input type="text" id="searchInput" placeholder="Search posts"/>
+      <button id="searchBtn">Search</button>
+
+      <div id="feedContainer"></div>
+    </section>
+  <!-- Post Detail Modal -->
+<div id="postModal" class="modal hidden">
+  <div class="modal-content">
+    <button id="closeModal" class="close-btn" aria-label="Close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+  </main>
+
+  <footer>
+    <p>COM769 Coursework 2 – Azure Static Web Apps</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
